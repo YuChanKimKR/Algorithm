@@ -1,4 +1,4 @@
-from math import *
+from math import ceil, log2
 
 # 입력
 N, M, K = map(int, input().split())
