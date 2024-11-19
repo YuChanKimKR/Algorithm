@@ -1,4 +1,6 @@
 from math import ceil, log2
+import sys
+input = sys.stdin.readline
 
 # 입력
 N, M, K = map(int, input().split())
