@@ -1,11 +1,9 @@
 N = int(input())
-words = set()
 
-for _ in range(N):
-    word = input().strip()
-    words.add(word)
+string1 = set([input() for _ in range(0, N)])
+strings = sorted(string1)
 
-sorted_words = sorted(words, key=lambda x: (len(x), x))
-
-for word in sorted_words:
-    print(word)
+for i in range(1, 51):
+    for j in range(0, len(strings)):
+        if len(strings[j]) == i:
+            print(strings[j])
