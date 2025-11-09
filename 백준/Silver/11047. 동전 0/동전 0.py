@@ -1,17 +1,17 @@
-N, K = map(int, input().split())
-coins = []
+n, m = map(int, input().split())
+arr = []
 
-for _ in range(N):
-    coins.append(int(input()))
+for i in range(n):
+    arr.append(int(input()))
 
-coins = list(reversed(coins))
-count = 0
+arr.sort(reverse=True)
 
-for coin in coins:
-    if K == 0:  # K원을 모두 만들었으면 반복 종료
-        break
-    if coin <= K:
-        count += K // coin
-        K %= coin
+cnt = 0
+money = m
 
-print(count)
+for coin in arr:
+    if money >= coin:
+        cnt += money // coin
+        money %= coin
+
+print(cnt)
