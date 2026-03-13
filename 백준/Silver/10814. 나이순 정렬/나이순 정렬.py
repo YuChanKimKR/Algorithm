@@ -1,11 +1,15 @@
-N = int(input())
-info_list = []
+n = int(input())
 
-for _ in range(N):
-    info = input().split()
-    info_list.append(info)
+data = [None] * n
 
-info_list.sort(key=lambda x: (int(x[0])))
+for i in range(n):
+    row = input().split()
+    age = int(row[0])
+    name = row[1]
 
-for info in info_list:
-    print(info[0], info[1])
+    data[i] = (age, name, i)
+
+data.sort(key = lambda x: (x[0], x[2]) )
+
+for person in data:
+    print(person[0], person[1])
